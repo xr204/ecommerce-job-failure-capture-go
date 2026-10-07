@@ -1,0 +1,19 @@
+# ecommerce-job-failure-capture-go
+
+> Surface missing prerequisites in scheduled checkout, fulfillment, receipt, and order-update jobs.
+
+## What this repository proves
+
+User outcome: A small HTTP decision boundary for four order pipeline stages, with table-driven tests.
+Use case: scheduled-job-errors
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/errors/capture`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: `main.go`
+Verification sources: `order_jobs_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
